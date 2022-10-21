@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'ui/screens.dart';
 import 'package:provider/provider.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -15,6 +16,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (ctx) => ProductsManager(),
+        ),
+        ChangeNotifierProvider(
+          create: (ctx) => CartManager(),
         ),
       ],
       child: MaterialApp(
